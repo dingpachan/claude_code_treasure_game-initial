@@ -86,9 +86,9 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-amber-100 flex flex-col items-center justify-center p-8">
       {/* Auth header */}
-      <div className="w-full max-w-2xl flex justify-end mb-4">
+      <div className="w-full flex mb-4">
         {currentUser ? (
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 ml-auto">
             <span className="text-amber-800 font-medium">👤 {currentUser.username}</span>
             <Button
               variant="outline"
@@ -100,7 +100,7 @@ export default function App() {
             </Button>
           </div>
         ) : (
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 ml-auto">
             <span className="text-amber-600 text-sm">遊客模式</span>
             <Button
               size="sm"
