@@ -29,7 +29,7 @@ function persist() {
 }
 
 export async function initDb(): Promise<void> {
-  const SQL = await initSqlJs({ locateFile: () => '/sql-wasm.wasm' });
+  const SQL = await initSqlJs({ locateFile: () => `${import.meta.env.BASE_URL}sql-wasm.wasm` });
   const saved = localStorage.getItem(DB_KEY);
   db = saved
     ? new SQL.Database(new Uint8Array(JSON.parse(saved)))
